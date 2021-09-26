@@ -11,7 +11,7 @@
       class="select__selected"
       :class="{ select__selected_option: modelValue }"
     >
-      {{ option }}
+      {{ modelValue || placeholder }}
     </div>
     <div class="select__drop" :class="{ select__drop_active: dropActive }">
       <div
@@ -31,6 +31,7 @@ export default {
   props: {
     modelValue: String,
     options: Array,
+    placeholder: String,
   },
   data: () => ({
     update: "",
@@ -44,15 +45,6 @@ export default {
       this.selectedOption = option;
 
       this.$emit("update:modelValue", option);
-    },
-  },
-  computed: {
-    option() {
-      if (this.modelValue) {
-        return this.modelValue;
-      } else {
-        return "ОС";
-      }
     },
   },
 };
@@ -170,6 +162,10 @@ export default {
     color: $text-color-2;
 
     padding: 10px;
+
+    -webkit-transition: color 0.3s linear;
+    -o-transition: color 0.3s linear;
+    transition: color 0.3s linear;
 
     &:hover {
       color: $text-color-1;

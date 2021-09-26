@@ -25,6 +25,6 @@ export default {
 
 <style lang="scss" scoped>
 .user {
-  margin: 60px;
+  margin: 60px 0px 0px 60px;
 }
 </style>

@@ -7,6 +7,7 @@
         { type: 'windows', name: 'Windows 10 / 7' },
         { type: 'macos', name: 'Mac OS (>Sierra)' },
       ]"
+      :placeholder="'ОС'"
       class="account-form__select"
     />
     <app-button class="account-form__btn">Отправить</app-button>
