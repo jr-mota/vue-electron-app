@@ -22,13 +22,14 @@
 
   cursor: pointer;
 
+  position: relative;
+
   -webkit-transition: top 0.3s linear;
   -o-transition: top 0.3s linear;
   transition: top 0.3s linear;
 
   &:active {
-    position: relative;
-    top: 1.5px;
+    top: 1px;
   }
 }
 </style>
