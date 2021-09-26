@@ -1,6 +1,6 @@
 export default {
   state: {
-    userSigned: false,
+    userSigned: true,
   },
   mutations: {
     setUserSigned(state, sign) {

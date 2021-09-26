@@ -9,7 +9,7 @@
   >
     <div
       class="select__selected"
-      :class="{ select__selected_option: selectedOption }"
+      :class="{ select__selected_option: modelValue }"
     >
       {{ option }}
     </div>
@@ -29,10 +29,11 @@
 <script>
 export default {
   props: {
+    modelValue: String,
     options: Array,
   },
   data: () => ({
-    selectedOption: "",
+    update: "",
     dropActive: false,
   }),
   methods: {
@@ -41,12 +42,14 @@ export default {
     },
     selectOption(option) {
       this.selectedOption = option;
+
+      this.$emit("update:modelValue", option);
     },
   },
   computed: {
     option() {
-      if (this.selectedOption) {
-        return this.selectedOption;
+      if (this.modelValue) {
+        return this.modelValue;
       } else {
         return "ОС";
       }
@@ -134,6 +137,8 @@ export default {
     position: absolute;
     left: 0;
     bottom: -130px;
+
+    z-index: 100;
 
     visibility: hidden;
 

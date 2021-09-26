@@ -24,12 +24,16 @@
 
   position: relative;
 
-  -webkit-transition: top 0.3s linear;
-  -o-transition: top 0.3s linear;
-  transition: top 0.3s linear;
+  -webkit-transition: top 0.3s linear, opacity 0.3s linear;
+  -o-transition: top 0.3s linear, opacity 0.3s linear;
+  transition: top 0.3s linear, opacity 0.3s linear;
 
   &:active {
     top: 1px;
+  }
+
+  &:disabled {
+    opacity: 0.5;
   }
 }
 </style>
