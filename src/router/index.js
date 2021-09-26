@@ -4,6 +4,9 @@ const routes = [
   {
     path: "/",
     name: "Home",
+    meta: {
+      layout: "default",
+    },
     component: import("../views/Home.vue"),
   },
 ];
