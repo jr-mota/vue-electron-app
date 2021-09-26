@@ -1,7 +1,12 @@
 <template>
   <section class="main-nav">
     <nav class="main-nav__nav">
-      <router-link class="main-nav__href" to="/">
+      <router-link
+        class="main-nav__href"
+        to="/user"
+        exact
+        active-class="main-nav__href_active"
+      >
         <svg
           width="20"
           height="22"
@@ -25,7 +30,12 @@
           />
         </svg>
       </router-link>
-      <router-link class="main-nav__href" to="/">
+      <router-link
+        class="main-nav__href"
+        to="/pc"
+        exact
+        active-class="main-nav__href_active"
+      >
         <svg
           width="24"
           height="24"
@@ -87,10 +97,30 @@
     border-radius: 10px;
 
     margin-top: 20px;
-    padding: 16px;
+    padding: 14px;
+
+    -webkit-transition: background-color 0.3s linear;
+    -o-transition: background-color 0.3s linear;
+    transition: background-color 0.3s linear;
 
     &:first-child {
       margin-top: 0;
+    }
+
+    svg {
+      path {
+        stroke: $color-5;
+      }
+    }
+
+    &_active {
+      background-color: $color-5;
+
+      svg {
+        path {
+          stroke: $color-1;
+        }
+      }
     }
   }
 }

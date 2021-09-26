@@ -7,7 +7,7 @@ const routes = [
     meta: {
       layout: "default",
     },
-    component: import("../views/User.vue"),
+    component: () => import("@/views/User.vue"),
   },
   {
     path: "/pc",
@@ -15,7 +15,7 @@ const routes = [
     meta: {
       layout: "default",
     },
-    components: import("../views/Pc.vue"),
+    components: () => import("@/views/Pc.vue"),
   },
 ];
 
@@ -23,5 +23,7 @@ const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
   routes,
 });
+
+router.push("/user");
 
 export default router;
