@@ -3,7 +3,7 @@
     <app-popup />
     <the-main-nav />
     <router-view v-slot="{ Component }">
-      <transition name="fade">
+      <transition name="fade" mode="out-in">
         <component :is="Component" />
       </transition>
     </router-view>
@@ -34,18 +34,15 @@ export default {
 
 .fade-enter-active,
 .fade-leave-active {
-  -webkit-transition-property: opacity;
-  -o-transition-property: opacity;
-  transition-property: opacity;
   -webkit-transition-duration: 0.3s;
   -o-transition-duration: 0.3s;
   transition-duration: 0.3s;
-}
-
-.fade-enter-active {
-  -webkit-transition-delay: 0.3s;
-  -o-transition-delay: 0.3s;
-  transition-delay: 0.3s;
+  -webkit-transition-property: opacity;
+  -o-transition-property: opacity;
+  transition-property: opacity;
+  -webkit-transition-timing-function: ease;
+  -o-transition-timing-function: ease;
+  transition-timing-function: ease;
 }
 
 .fade-enter,

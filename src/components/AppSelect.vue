@@ -54,6 +54,8 @@ export default {
 @import "@/assets/css/vars.scss";
 
 .select {
+  min-width: 300px;
+
   position: relative;
 
   padding: 20px 25px;

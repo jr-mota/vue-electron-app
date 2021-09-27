@@ -17,6 +17,6 @@ export default {
 
 <style lang="scss" scoped>
 .pc {
-  margin: 60px 0px 0px 60px;
+  margin: 60px 0px 60px 60px;
 }
 </style>

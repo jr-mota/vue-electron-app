@@ -11,11 +11,15 @@ const routes = [
   },
   {
     path: "/pc",
-    name: "Pc",
+    name: "PC",
     meta: {
       layout: "default",
     },
-    components: () => import("@/views/Pc.vue"),
+    component: () => import("@/views/Pc.vue"),
+  },
+  {
+    path: "/:pathMatch(.*)*",
+    component: () => import("@/views/User.vue"),
   },
 ];
 
