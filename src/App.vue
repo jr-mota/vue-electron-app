@@ -11,6 +11,9 @@ export default {
   components: {
     DefaultLayout,
   },
+  mounted() {
+    this.$router.push("/user");
+  },
   computed: {
     layout() {
       return (this.$route.meta.layout || "default") + "-layout";

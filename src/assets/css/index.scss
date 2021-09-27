@@ -9,6 +9,9 @@
 
 html {
   min-height: 100%;
+
+  overflow: scroll;
+  overflow-x: hidden;
 }
 
 body {
@@ -19,4 +22,9 @@ body {
 
   color: $text-color-1;
   background-color: $color-4;
+}
+
+::-webkit-scrollbar {
+  width: 0;
+  background: transparent;
 }

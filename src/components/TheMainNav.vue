@@ -79,7 +79,7 @@
 
   position: fixed;
   left: 0;
-  top: 0;
+  top: 50px;
 
   padding: 24px;
 

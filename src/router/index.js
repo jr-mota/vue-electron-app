@@ -19,6 +19,7 @@ const routes = [
   },
   {
     path: "/:pathMatch(.*)*",
+
     component: () => import("@/views/User.vue"),
   },
 ];
@@ -27,7 +28,5 @@ const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
   routes,
 });
-
-router.push("/user");
 
 export default router;
