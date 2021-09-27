@@ -22,9 +22,3 @@ export default {
   },
 };
 </script>
-
-<style lang="scss" scoped>
-.user {
-  margin: 60px 0px 60px 60px;
-}
-</style>

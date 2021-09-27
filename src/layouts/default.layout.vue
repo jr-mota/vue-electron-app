@@ -2,11 +2,13 @@
   <div class="default-layout">
     <app-popup />
     <the-main-nav />
-    <router-view v-slot="{ Component }">
-      <transition name="fade" mode="out-in">
-        <component :is="Component" />
-      </transition>
-    </router-view>
+    <div class="default-layout__router-wrapper">
+      <router-view v-slot="{ Component }">
+        <transition name="fade" mode="out-in">
+          <component :is="Component" />
+        </transition>
+      </router-view>
+    </div>
   </div>
 </template>
 
@@ -30,6 +32,10 @@ export default {
   -webkit-box-pack: start;
   -ms-flex-pack: start;
   justify-content: flex-start;
+
+  &__router-wrapper {
+    margin: 60px 0px 60px 160px;
+  }
 }
 
 .fade-enter-active,

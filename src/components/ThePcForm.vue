@@ -1,5 +1,5 @@
 <template>
-  <form class="pc-form">
+  <form class="pc-form" @submit.prevent="submit">
     <app-select
       class="pc-form__select"
       v-model="os"
@@ -27,21 +27,53 @@
         { type: 'amdradeon', name: 'AMD Radeon' },
       ]"
     />
+    <app-button class="pc-form__btn" :disabled="process">
+      {{ btnText }}
+    </app-button>
   </form>
 </template>
 
 <script>
 import AppSelect from "@/components/AppSelect.vue";
+import AppButton from "@/components/AppButton.vue";
 
 export default {
   components: {
     AppSelect,
+    AppButton,
   },
   data: () => ({
     os: "",
     cpu: "",
     gpu: "",
+    btnText: "START",
+    process: false,
   }),
+  methods: {
+    submit(e) {
+      if (this.os && this.cpu && this.gpu) {
+        this.process = setTimeout(this.processMethod.bind(this), 3000);
+
+        this.os = "";
+        this.cpu = "";
+        this.gpu = "";
+        this.btnText = "Процесс...";
+
+        this.$store.commit("setPopupText", "Процесс запущен");
+        this.$store.commit("activatePopup");
+      } else {
+        this.$store.commit("setPopupText", "Заполните данные!");
+        this.$store.commit("activatePopup");
+      }
+    },
+    processMethod() {
+      this.process = false;
+      this.btnText = "START";
+
+      this.$store.commit("setPopupText", "Процесс завершен");
+      this.$store.commit("activatePopup");
+    },
+  },
 };
 </script>
 
@@ -74,6 +106,10 @@ export default {
     &:first-child {
       margin-top: 0;
     }
+  }
+
+  &__btn {
+    margin-top: 20px;
   }
 }
 </style>

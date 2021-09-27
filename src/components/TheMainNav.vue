@@ -75,8 +75,11 @@
 
 .main-nav {
   width: 100px;
-  height: 100%;
   min-height: 100vh;
+
+  position: fixed;
+  left: 0;
+  top: 0;
 
   padding: 24px;
 
