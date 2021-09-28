@@ -51,9 +51,13 @@
 </template>
 
 <script>
+import { ipcRenderer } from "electron";
+
 export default {
   methods: {
     collapseApp(e) {
+      console.log(window.ipcRenderer);
+
       window.ipcRenderer.send("collapse-app");
     },
     closeApp(e) {

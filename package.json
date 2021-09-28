@@ -1,5 +1,5 @@
 {
-  "name": "vue-electron-app",
+  "name": "atomv3.0",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -11,7 +11,7 @@
     "postinstall": "electron-builder install-app-deps",
     "postuninstall": "electron-builder install-app-deps"
   },
-  "main": "./src/background.js",
+  "main": "background.js",
   "dependencies": {
     "core-js": "^3.6.5",
     "vue": "^3.0.0",
@@ -24,7 +24,6 @@
     "@vue/cli-plugin-vuex": "~4.5.0",
     "@vue/cli-service": "~4.5.0",
     "@vue/compiler-sfc": "^3.0.0",
-    "custom-electron-titlebar": "^3.2.7",
     "electron": "^13.0.0",
     "electron-devtools-installer": "^3.1.0",
     "sass": "^1.42.1",

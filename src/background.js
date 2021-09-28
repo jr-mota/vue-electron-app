@@ -22,9 +22,12 @@ async function createWindow() {
     frame: false,
     resizable: false,
     webPreferences: {
-      devTools: false,
-      contextIsolation: false,
+      devTools: true,
+      nodeIntegration: process.env.ELECTRON_NODE_INTEGRATION,
+      contextIsolation: !process.env.ELECTRON_NODE_INTEGRATION,
+      enableRemoteModule: false,
       preload: path.join(__dirname, "../src/preload.js"),
+      //preload: path.join(__dirname, "preload.js"),
     },
   });
 
