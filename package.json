@@ -14,6 +14,7 @@
   "main": "background.js",
   "dependencies": {
     "core-js": "^3.6.5",
+    "electron-builder": "^22.11.7",
     "vue": "^3.0.0",
     "vue-router": "^4.0.0-0",
     "vuex": "^4.0.0-0"
@@ -26,6 +27,7 @@
     "@vue/compiler-sfc": "^3.0.0",
     "electron": "^13.0.0",
     "electron-devtools-installer": "^3.1.0",
+    "electron-icon-builder": "^2.0.1",
     "sass": "^1.42.1",
     "sass-loader": "^10.2.0",
     "vue-cli-plugin-electron-builder": "~2.1.1"

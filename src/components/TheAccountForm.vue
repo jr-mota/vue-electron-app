@@ -50,6 +50,8 @@ export default {
 @import "@/assets/css/vars.scss";
 
 .account-form {
+  min-width: 350px;
+
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -61,7 +63,7 @@ export default {
   -ms-flex-pack: center;
   justify-content: center;
 
-  padding: 40px;
+  padding: 30px;
 
   background-color: $color-3;
 

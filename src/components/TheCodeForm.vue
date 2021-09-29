@@ -45,7 +45,7 @@ export default {
   -ms-flex-pack: center;
   justify-content: center;
 
-  padding: 40px;
+  padding: 30px;
 
   background-color: $color-3;
 

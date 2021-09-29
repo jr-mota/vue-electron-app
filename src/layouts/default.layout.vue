@@ -1,29 +1,24 @@
 <template>
   <div class="default-layout">
     <app-popup />
-    <the-title-bar />
-    <div class="default-layout__page-wrapper">
-      <the-main-nav />
-      <div class="default-layout__router-wrapper">
-        <router-view v-slot="{ Component }">
-          <transition name="fade" mode="out-in">
-            <component :is="Component" />
-          </transition>
-        </router-view>
-      </div>
+    <the-main-nav />
+    <div class="default-layout__router-wrapper">
+      <router-view v-slot="{ Component }">
+        <transition name="fade" mode="out-in">
+          <component :is="Component" />
+        </transition>
+      </router-view>
     </div>
   </div>
 </template>
 
 <script>
 import AppPopup from "@/components/AppPopup.vue";
-import TheTitleBar from "@/components/TheTitleBar.vue";
 import TheMainNav from "@/components/TheMainNav.vue";
 
 export default {
   components: {
     AppPopup,
-    TheTitleBar,
     TheMainNav,
   },
 };
@@ -33,8 +28,8 @@ export default {
 @import "@/assets/css/vars.scss";
 
 .default-layout {
-  &__page-wrapper {
-    max-height: $window-max-height;
+  &__router-wrapper {
+    max-width: 300px;
 
     display: -webkit-box;
     display: -ms-flexbox;
@@ -42,10 +37,8 @@ export default {
     -webkit-box-pack: start;
     -ms-flex-pack: start;
     justify-content: flex-start;
-  }
 
-  &__router-wrapper {
-    margin: 110px 0px 60px 160px;
+    margin: 40px 0px 40px 180px;
   }
 }
 

@@ -19,15 +19,13 @@ async function createWindow() {
     width: 642,
     height: 440,
     autoHideMenuBar: true,
-    frame: false,
+    frame: true,
     resizable: false,
     webPreferences: {
-      devTools: true,
+      devTools: false,
       nodeIntegration: process.env.ELECTRON_NODE_INTEGRATION,
       contextIsolation: !process.env.ELECTRON_NODE_INTEGRATION,
       enableRemoteModule: false,
-      preload: path.join(__dirname, "../src/preload.js"),
-      //preload: path.join(__dirname, "preload.js"),
     },
   });
 
