@@ -8,7 +8,7 @@
 @import "@/assets/css/vars.scss";
 
 .button {
-  padding: 10px 60px;
+  padding: 12px 60px;
 
   border: none;
   outline: none;

@@ -54,11 +54,11 @@ export default {
 @import "@/assets/css/vars.scss";
 
 .select {
-  min-width: 300px;
+  min-width: 280px;
 
   position: relative;
 
-  padding: 20px 25px;
+  padding: 15px 25px;
 
   border-radius: 10px;
 
@@ -91,7 +91,7 @@ export default {
       top: 16%;
       right: 3%;
 
-      padding: 20px;
+      padding: 18px;
 
       background-image: url("../assets/svg/chevron-down.svg");
       background-repeat: no-repeat;
@@ -110,7 +110,7 @@ export default {
       top: 16%;
       right: 3%;
 
-      padding: 20px;
+      padding: 18px;
 
       background-image: url("../assets/svg/chevron-up.svg");
       background-repeat: no-repeat;

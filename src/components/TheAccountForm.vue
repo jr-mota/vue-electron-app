@@ -63,11 +63,11 @@ export default {
   -ms-flex-pack: center;
   justify-content: center;
 
-  padding: 30px;
+  padding: 45px 45px;
 
   background-color: $color-3;
 
-  border-radius: 10px;
+  border-radius: 16px;
 
   &__select {
     margin-top: 20px;

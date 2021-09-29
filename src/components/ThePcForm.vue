@@ -94,11 +94,14 @@ export default {
   -ms-flex-pack: center;
   justify-content: center;
 
-  padding: 30px;
+  position: relative;
+  bottom: 20px;
+
+  padding: 30px 45px;
 
   background-color: $color-3;
 
-  border-radius: 10px;
+  border-radius: 16px;
 
   &__select {
     margin-top: 20px;

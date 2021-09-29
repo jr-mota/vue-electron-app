@@ -1,6 +1,7 @@
 <template>
   <div class="default-layout">
     <app-popup />
+    <the-title-bar />
     <the-main-nav />
     <div class="default-layout__router-wrapper">
       <router-view v-slot="{ Component }">
@@ -13,11 +14,13 @@
 </template>
 
 <script>
+import TheTitleBar from "@/components/TheTitleBar.vue";
 import AppPopup from "@/components/AppPopup.vue";
 import TheMainNav from "@/components/TheMainNav.vue";
 
 export default {
   components: {
+    TheTitleBar,
     AppPopup,
     TheMainNav,
   },
@@ -28,6 +31,10 @@ export default {
 @import "@/assets/css/vars.scss";
 
 .default-layout {
+  &__page-wrapper {
+    position: relative;
+  }
+
   &__router-wrapper {
     max-width: 300px;
 
@@ -38,7 +45,7 @@ export default {
     -ms-flex-pack: start;
     justify-content: flex-start;
 
-    margin: 40px 0px 40px 180px;
+    margin: 110px 0px 40px 160px;
   }
 }
 

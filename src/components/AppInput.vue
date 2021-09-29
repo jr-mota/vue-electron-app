@@ -27,7 +27,7 @@ export default {
   display: flex;
 
   &__input {
-    padding: 20px 25px;
+    padding: 18px 15px;
 
     border: none;
     outline: none;
@@ -65,7 +65,7 @@ export default {
       top: 15%;
       right: 30%;
 
-      padding: 20px;
+      padding: 18px;
 
       border-radius: 10px;
 

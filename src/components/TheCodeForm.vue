@@ -45,16 +45,16 @@ export default {
   -ms-flex-pack: center;
   justify-content: center;
 
-  padding: 30px;
+  padding: 60px 50px;
 
   background-color: $color-3;
 
-  border-radius: 10px;
+  border-radius: 16px;
 
   text-align: center;
 
   &__btn {
-    margin-top: 20px;
+    margin-top: 30px;
   }
 }
 </style>

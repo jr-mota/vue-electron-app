@@ -19,10 +19,10 @@ async function createWindow() {
     width: 642,
     height: 440,
     autoHideMenuBar: true,
-    frame: true,
+    frame: false,
     resizable: false,
     webPreferences: {
-      devTools: false,
+      devTools: true,
       nodeIntegration: process.env.ELECTRON_NODE_INTEGRATION,
       contextIsolation: !process.env.ELECTRON_NODE_INTEGRATION,
       enableRemoteModule: false,
